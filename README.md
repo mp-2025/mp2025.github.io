@@ -1,2 +1,2 @@
-# mp2025.github.io
-portfolio site
+# portfolio site
+## keep track of what we've been up to and the services we provide
