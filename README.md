@@ -1,2 +1,2 @@
 # portfolio site
-## keep track of what we've been up to and the services we provide
+keep track of what we've been up to and the services we provide
