@@ -274,6 +274,10 @@
 	.hamburger.open span:first-child{transform:rotate(45deg) translateY(8px)}
 	.hamburger.open span:nth-child(2){opacity:0}
 	.hamburger.open span:nth-child(3){transform:rotate(-45deg) translateY(-8px)}
+	@media (max-width:768px){	
+		.hero-content h1 {font-size: 2.5rem} 
+		.hero-content p {font-size:1.2rem}
+	}
 	@media (max-width:768px){
 		header{grid-template-columns:auto auto}
 		.hamburger{display:flex !important;margin-left:auto}
@@ -284,8 +288,6 @@
 		nav#navbar ul li a{color:#fff;font-size:1.4rem;font-weight:600;text-decoration:none;transition:color .2s}
 		nav#navbar ul li a:hover{color:#d1d5db}
 		@keyframes fadeIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-	}
-	@media (max-width:768px){
 		.about-row,.about-text,.footer-content{text-align:center}
 		.footer-content{flex-direction:column;gap:2.5rem}
 		.footer-col{min-width:100%}
