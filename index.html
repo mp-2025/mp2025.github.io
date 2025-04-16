@@ -55,6 +55,7 @@
 	.services-list,.values{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:1rem}
 	.card{padding:2rem;text-align:center}
 	.services-list li,.values li{background:#f1f5f9;padding:.5rem 1rem;border-radius:4px;flex:1 1 calc(50% - 1rem);text-align:center}
+	.pricing-note{text-align: center; text-transform: uppercase;}
 </style>
 
 <body>
@@ -80,8 +81,8 @@
 	<section id="home" class="hero-section">
 	  <div class="hero-overlay">
 	    <div class="hero-content">
-	      <h1>Your Trusted Procurement Partner</h1>
-	      <p>Simple, fast, and reliable material procurement for government contractors.</p>
+	      <h1>Your Trusted Supplier</h1>
+	      <p>Simple, fast, and reliable material procurement for government contracts.</p>
 	      <a href="#schedule" class="cta-button">Let's Work Together🤝</a>
 	    </div>
 	  </div>
@@ -92,48 +93,37 @@
 	  <div class="services-grid">
 	    <div class="service-card">
 	      <img src="b.webp" alt="Material Purchasing Icon">
-	      <h3>Material Purchasing</h3>
-	      <p>We handle sourcing and order execution with your vendors.</p>
+	      <h3>Material Supply</h3>
+	      <p>We sell construction materials directly and manage the full procurement process.</p>
 	    </div>
 	    <div class="service-card">
 	      <img src="c.webp" alt="White Glove Delivery Icon">
 	      <h3>Site Coordination</h3>
-	      <p>Coordinate delivery, unloading, and placement of your orders.</p>
+	      <p>We deliver materials, unload on-site, and ensure proper placement for seamless project flow.</p>
 	    </div>
 	    <div class="service-card">
 	      <img src="d.webp" alt="Submittals Icon">
 	      <h3>Submittals & Admin</h3>
-	      <p>We assist with forms, compliance, and documentation.</p>
+	      <p>We prepare and provide required submittals, compliance docs, and delivery verification.</p>
 	    </div>
 	</section>
 
-	<h2 class="section-title">Flexible Procurement Support</h2>
+	<h2 class="section-title">Our Offering</h2>
 	<section id="pricing" class="pricing-section">
 	  <div class="pricing-layout">
 	    <!-- Base Service -->
 	    <div class="base-service">
-	      <h3>Base Service</h3>
-	      <p class="pricing-subtitle">Procurement Facilitation</p>
+	      <h3>Flexible Supply Support</h3>
+	      <p class="pricing-subtitle">From our inventory to your job site — direct and dependable.</p>
 	      <ul>
-	        <li>We place orders on your behalf</li>
-	        <li>SDVOSB partnership compliance</li>
-	        <li>Vendor communication & coordination</li>
+	        <li>We supply construction and project materials directly to your site</li>
+	        <li>We coordinate efficient delivery and logistics to keep timelines on track</li>
+	        <li>We provide documentation to support SDVOSB set-aside and subcontracting goals</li>
 	      </ul>
-	      <p class="pricing-note">Simple flat service fee — you pay vendors directly.</p>
-				<div class="pricing-cta">
-					<a href="#schedule" class="cta-button-call">📅 Schedule a call</a>
-				</div>
-	    </div>
-
-	    <!-- Optional Add-Ons -->
-	    <div class="add-ons">
-	      <h3>Optional Add-Ons</h3>
-	      <ul>
-	        <li><strong>Short-term Funding</strong><br>• Streamline cash flow & reduce vendor setup.</li>
-	        <li><strong>Delivery Coordination</strong><br>• Save time & avoid back-and-forth.</li>
-	        <li><strong>On-Site Support</strong><br>• Peace of mind for busy project teams.</li>
-		<li style="margin-bottom:0;"><strong>Compliance Documentation</strong><br>• Ensure you meet supplier requirements.</li>
-	      </ul>
+	      <p class="pricing-note">Simple and transparent pricing</p>
+	      <div class="pricing-cta">
+	        <a href="#schedule" class="cta-button-call">📅 Schedule a call</a>
+	      </div>
 	    </div>
 	  </div>
 	</section>
@@ -220,16 +210,15 @@
 
 </body>
 <style>
-	.pricing-layout {display: grid;grid-template-columns: 1.5fr 1.5fr;gap: 2rem;align-items: start;}
 	.base-service {background: #fff;border: 1px dashed #1d242d;border-radius: 8px;padding: 0 2rem 2rem 2rem;box-shadow: 0 4px 12px rgba(0,0,0,0.05);}
 	.base-service h3{margin-bottom:0;}
-	.base-service p{margin-top:0;}
+	.base-service p{margin-top:1.5em; margin-bottom: 0;}
 	.base-service ul {list-style: none;padding: 0;}
 	.base-service li::before {content: '✔';margin-right: 0.5rem;color: #10b981;}
 	.add-ons {background: #fbfcfd;border: 1px solid #e5e7eb;border-radius: 8px;padding: 0 2rem 2rem 2rem;box-shadow: 0 2px 8px rgba(0,0,0,0.03);}
 	.add-ons ul {list-style: none;padding: 0;margin:0;}
 	.add-ons li {margin-bottom: 1rem;}
-	.pricing-cta {text-align: center;margin-top: 2rem;}
+	.pricing-cta {text-align: center;}
 	.circle,footer{background-color:#1d242d}
 	#about{display:flex;flex-direction:column;align-items:center;gap:2rem}
 	.about-row{display:flex;flex-wrap:wrap;align-items:center;gap:2.5rem;width:100%}
@@ -261,7 +250,7 @@
 		.hero-content p {font-size:1.2rem}
 		.section-title{text-align:center; padding:0; margin:2rem auto 1rem;}
 	@media (max-width:768px){
-		.pricing-layout {grid-template-columns: 1fr;}
+		.base-service p {margin-top:2em;}
 		header{grid-template-columns:auto auto}
 		.hamburger{display:flex !important;margin-left:auto}
 		.hamburger span{display: block;}
