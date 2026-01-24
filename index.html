@@ -1,307 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="procurement, logistics, SDVOSB, veteran-owned, contractor support">
-	<meta name="description" content="MADY Partners is a veteran-owned procurement and logistics support company, providing flexible material sourcing and white-glove delivery services for government contractors.">
-	<meta property="og:site_name" content="MADY Partners">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MADY Partners | Federal AI & Software Systems</title>
 
-	<!-- Facebook Meta Tags -->
-	<meta property="og:url" content="https://madypartners.com">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="MADY Partners">
-	<meta property="og:description" content="Flexible procurement and delivery services for contractors. Veteran-owned, service-first.">
-	<meta property="og:image" content="https://github.com/mp-2025/mp2025.github.io/blob/main/logo.webp?raw=true">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-	<!-- Twitter Meta Tags -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta property="twitter:domain" content="madypartners.com">
-	<meta property="twitter:url" content="https://madypartners.com">
-	<meta name="twitter:title" content="MADY Partners">
-	<meta name="twitter:description" content="Flexible procurement and delivery services for contractors. Veteran-owned, service-first.">
-	<meta name="twitter:image" content="https://github.com/mp-2025/mp2025.github.io/blob/main/logo.webp?raw=true">
+  <meta name="description" content="MADY Partners is a veteran-led SDVOSB software publisher delivering secure, AI-enabled mission applications for the DoD and IC. CAGE: 11LY1." />
+  <meta name="keywords" content="SDVOSB, Federal AI, DoD Software, CAGE 11LY1, UEI TEFJYBKTYUD4, Software Publisher, Anees Merzi, Veteran Owned Small Business" />
+  <meta property="og:title" content="MADY Partners | Mission Software" />
+  <meta property="og:description" content="Veteran-led federal software publisher specializing in AI-enabled mission applications." />
+  <meta property="og:image" content="logo.webp" />
 
-	<link rel="icon" type="image/png" href="favicon.png" />
-	<link rel="apple-touch-icon" href="favicon.png">
-	<title>MADY Partners</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #020408;
+      --panel: #0a0f1a;
+      --accent-cyan: #00f2ff;
+      --accent-purple: #7000ff;
+      --accent-lime: #adff00;
+      --text-main: #f8fafc;
+      --text-dim: #94a3b8;
+      --header-glass: rgba(10, 15, 26, 0.9);
+    }
+
+    * { box-sizing: border-box; cursor: crosshair; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    /* --- Background Layer --- */
+    .mesh-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -1;
+      background: 
+        radial-gradient(at 0% 0%, rgba(112, 0, 255, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.12) 0px, transparent 50%);
+    }
+
+    /* --- High Contrast Header --- */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0; z-index: 1000;
+      padding: 0.8rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--header-glass);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo-container { background: #ffffff; padding: 6px 12px; border-radius: 4px; display: flex; align-items: center; transition: 0.3s; }
+    .logo-container:hover { transform: translateY(-1px); box-shadow: 0 0 15px rgba(0,242,255,0.3); }
+    .logo-container img { height: 26px; }
+
+    /* Header Contact Button */
+    .header-btn {
+      background: transparent;
+      color: var(--accent-cyan);
+      border: 1px solid var(--accent-cyan);
+      padding: 8px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+    .header-btn:hover { background: var(--accent-cyan); color: #000; box-shadow: 0 0 15px var(--accent-cyan); }
+
+    /* --- Hero --- */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 10%;
+      background-image: linear-gradient(rgba(2, 4, 8, 0.6), rgba(2, 4, 8, 0.6)), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.95;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* --- Experience Timeline --- */
+    .section-title { font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
+    .section-subtitle { color: var(--accent-lime); text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; text-align: center; margin-bottom: 10px; }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 10%;
+    }
+
+    .exp-card {
+      background: var(--panel);
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-purple);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exp-card::after {
+        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        background: linear-gradient(45deg, transparent, rgba(0, 242, 255, 0.03));
+        pointer-events: none;
+    }
+
+    .exp-card h4 { margin: 0; color: var(--accent-cyan); font-family: 'Space Grotesk'; font-size: 1.2rem; }
+    .exp-card .role { font-size: 0.75rem; color: var(--accent-lime); margin-bottom: 12px; display: block; font-weight: 700; }
+    .exp-card p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.5; }
+
+    /* --- Competencies --- */
+    .competency-box { padding: 6rem 10%; background: rgba(255,255,255,0.015); border-top: 1px solid rgba(255,255,255,0.05); }
+
+    /* --- Footer --- */
+    footer {
+      background: #010204;
+      padding: 5rem 10% 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-logo-area { display: flex; flex-direction: column; gap: 1.5rem; }
+    .footer-badge { height: 70px; width: auto; align-self: flex-start; filter: drop-shadow(0 0 10px rgba(0,242,255,0.2)); }
+
+    .spec-list { list-style: none; padding: 0; font-family: 'Space Grotesk'; }
+    .spec-list li { margin-bottom: 12px; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; font-size: 0.85rem; }
+    .spec-label { color: var(--accent-cyan); font-size: 0.7rem; font-weight: 700; }
+
+    .btn {
+      background: var(--accent-cyan);
+      color: black;
+      padding: 16px 45px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 800;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: 0.3s;
+      border: none;
+    }
+
+    .btn:hover { background: var(--accent-lime); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,242,255,0.4); }
+
+    @media (max-width: 768px) {
+      header { justify-content: center; padding: 1rem; gap: 1rem; }
+      .header-btn { display: none; } /* Simplified mobile header */
+      .hero { text-align: center; }
+      .hero h1 { font-size: 3.5rem; }
+      .footer-grid { text-align: center; }
+      .footer-badge { align-self: center; }
+    }
+  </style>
 </head>
-<style>
-	.hero-content h1,.hero-content p{-webkit-text-stroke-width:1px;-webkit-text-stroke-color:#fff;text-shadow:2px 2px 9px #000}
-	.card:hover,.plan-card:hover,.service-card:hover{transform:translateY(-5px)}
-	.cta-button,.cta-button-call, nav a{text-decoration:none}
-	html{scroll-behavior:smooth;scroll-padding-top:150px}
-	body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;background-color:#eee}
-	header{background-color:#1d242d;padding:1rem 2rem;position:sticky;top:0;z-index:1000;display:grid;grid-template-columns:auto 1fr;align-items:center}
-	.logo{height:40px;filter:invert(100%)}#navbar{padding-left:30px}
-	nav ul{list-style:none;display:flex;gap:2.5rem;margin:0;padding:0}
-	nav a{color:#fff;font-weight:600;transition:color .3s}
-	.footer-col a:hover,nav a:hover{color:#d7d7d7}
-	section{padding:2rem;max-width:960px;margin:auto auto 2rem;background-color:#fbfcfd;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-	.hero-section{background-image:url('hero.webp');background-size:cover;background-position:center;height:300px;position:relative;margin-bottom:2rem;border-radius:0;padding:0;max-width:none;box-shadow:none;color:#fff;text-align:center}
-	.hero-overlay{background-color:rgba(29,36,45,.25);height:100%;display:flex;align-items:center;justify-content:center;padding:0 1rem}
-	.hero-content h1{font-size:4rem;margin-bottom:0;margin-top:0}
-	.hero-content p{font-size:1.5rem;margin-bottom:1rem;margin-top:-10px;padding-top:0}
-	.cta-button, .cta-button-call{display:inline-block;padding:.75rem 2rem;border-radius:6px;font-weight:700;margin-top:1rem;transition:background .2s;font-size:18px; background-color:#000;color:#fff;}
-	.cta-button{transform:rotate(357deg);}
-	.card,.service-card{border:1px solid #e5e7eb;transition:transform .3s}
-	.cta-button:hover, .cta-button-call:hover{background-color:#202020}
-	.section-title{max-width:960px;margin:4rem auto 1rem;padding-right:4rem;font-size:2rem;font-weight:600;color:#1d242d}
-	.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem}
-	.service-card{background:#fff;border-radius:8px;padding:2rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.03)}
-	.service-card img{width:40px;height:40px;margin-bottom:0.5rem}
-	.service-card h3{font-size:1.2rem;margin-bottom:.5rem;margin-top: 0;color:#1d242d}
-	.service-card p{font-size:.95rem;color:#444;margin:0}
-	.services-list,.values{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:1rem}
-	.card{padding:2rem;text-align:center}
-	.services-list li,.values li{background:#f1f5f9;padding:.5rem 1rem;border-radius:4px;flex:1 1 calc(50% - 1rem);text-align:center}
-	.pricing-note{text-align: center; text-transform: uppercase;}
-</style>
-
 <body>
-	<header>
-	  <img src="logo-removebg.webp" alt="MADY Partners Logo" class="logo">
-	  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation" style="display: none; ">
-	    <span></span>
-	    <span></span>
-	    <span></span>
-	  </button>
-	  <nav id="navbar">
-	    <ul>
-	      <li><a href="#top">Home</a></li>
-	      <li><a href="#services">Services</a></li>
-	      <li><a href="#pricing">Offerings</a></li>
-	      <li><a href="#about">About Us</a></li>
-	      <li><a href="#schedule">Schedule</a></li>
-	      <li><a href="#contact">Contact</a></li>
-	    </ul>
-	  </nav>
-	</header>
 
-	<section id="home" class="hero-section">
-	  <div class="hero-overlay">
-	    <div class="hero-content">
-	      <h1>Your Trusted Supplier</h1>
-	      <p>Simple, fast, and reliable material procurement for government contracts.</p>
-	      <a href="#schedule" class="cta-button">Let's Work Together🤝</a>
-	    </div>
-	  </div>
-	</section>
+<div class="mesh-bg"></div>
 
-	<h2 class="section-title">What We Do</h2>
-	<section id="services">
-	  <div class="services-grid">
-	    <div class="service-card">
-	      <img src="b.webp" alt="Material Purchasing Icon">
-	      <h3>Material Supply</h3>
-	      <p>We sell construction materials directly and manage the full procurement process.</p>
-	    </div>
-	    <div class="service-card">
-	      <img src="c.webp" alt="White Glove Delivery Icon">
-	      <h3>Site Coordination</h3>
-	      <p>We deliver materials, unload on-site, and ensure proper placement for seamless project flow.</p>
-	    </div>
-	    <div class="service-card">
-	      <img src="d.webp" alt="Submittals Icon">
-	      <h3>Submittals & Admin</h3>
-	      <p>We prepare and provide required submittals, compliance docs, and delivery verification.</p>
-	    </div>
-	</section>
+<header>
+  <div class="logo-container">
+    <img src="logo.webp" alt="MADY Partners">
+  </div>
+  <a href="mailto:MADYPartners@gmail.com" class="header-btn">Secure Briefing</a>
+</header>
 
-	<h2 class="section-title">Our Offering</h2>
-	<section id="pricing" class="pricing-section">
-	  <div class="pricing-layout">
-	    <!-- Base Service -->
-	    <div class="base-service">
-	      <h3>Flexible Supply Support</h3>
-	      <p class="pricing-subtitle">From our inventory to your job site.</p>
-	      <ul>
-	        <li>We supply construction and project materials directly to your site</li>
-	        <li>We coordinate efficient delivery and logistics to keep timelines on track</li>
-	        <li>We provide documentation to support SDVOSB set-aside and subcontracting goals</li>
-	      </ul>
-	      <p class="pricing-note">Simple and transparent pricing</p>
-	      <div class="pricing-cta">
-	        <a href="#schedule" class="cta-button-call">📅 Schedule a call</a>
-	      </div>
-	    </div>
-	  </div>
-	</section>
+<section class="hero">
+  <span class="section-subtitle" style="text-align: left;">CAGE: 11LY1 | UEI: TEFJYBKTYUD4</span>
+  <h1>Mission Software <br><span class="gradient-text">Redefined.</span></h1>
+  <p style="max-width: 600px; font-size: 1.25rem; color: var(--text-dim); margin-top: 1.5rem; line-height: 1.6;">
+    Veteran-led software publisher delivering secure, generative AI and mission-critical applications for the DoD and Intelligence Community.
+  </p>
+</section>
 
+<section id="experience" style="padding: 6rem 0;">
+  <span class="section-subtitle">Proven Leadership Track Record</span>
+  <h2 class="section-title">Bringing Commercial Innovation <br>Into "The Building"</h2>
+  
+  <div class="experience-grid">
+    <div class="exp-card">
+      <span class="role">SCALE AI (DONOVAN)</span>
+      <h4>Engagement Manager</h4>
+      <p>Driving GenAI adoption for Joint Staff workflows, focusing on high-fidelity artifact generation for multi-domain operations.</p>
+    </div>
+    
+    <div class="exp-card">
+      <span class="role">ROHIRRIM (ROHANPROCURE)</span>
+      <h4>Product Lead</h4>
+      <p>Architected GenAI acquisition tools from concept to OTA award, streamlining procurement artifacts for COR/COTR stakeholders.</p>
+    </div>
 
-	<h2 class="section-title">About MADY</h2>
-	<section id="about">
-	  <div class="about-row">
-	    <div class="about-photo">
-	      <img src="founder.webp" alt="Founder of MADY Partners">
-	    </div>
-	    <div class="about-text">
-	      <p>
-	        Founded by Anees Merzi, a West Point graduate and Service-Disabled Veteran. Anees served 9-years active duty in the US Army as a Field Artillery Officer.<br><br>
-	        MADY Partners brings military-grade precision and accountability to your projects. We pride ourselves on being the dependable partner that contractors trust to get materials on site. Fast, verified, and ready for action.
-	      </p>
-	    </div>
-	  </div>
-		<div class="core-values-timeline">
-		  <div class="value-step">
-		    <div class="circle">1</div>
-		    <h4>Integrity</h4>
-		    <p>We lead with trust and principles. NO SHORTCUTS.</p>
-		  </div>
-		  <div class="value-step">
-		    <div class="circle">2</div>
-		    <h4>Efficiency</h4>
-		    <p>Speed, simplicity, and results built into our process.</p>
-		  </div>
-		  <div class="value-step">
-		    <div class="circle">3</div>
-		    <h4>Transparency</h4>
-		    <p>Clarity and honesty in every transaction and update.</p>
-		  </div>
-		  <div class="value-step">
-		    <div class="circle">4</div>
-		    <h4>Reliability</h4>
-		    <p>You can count on us to deliver. EVERY TIME.</p>
-		  </div>
-		</div>
-	</section>
+    <div class="exp-card">
+      <span class="role">TWO SIX TECHNOLOGIES (IKE)</span>
+      <h4>Product Manager</h4>
+      <p>Matured a defensive cyber mission planning prototype into a production platform integrating massive-scale workflow automation.</p>
+    </div>
 
-	<h2 class="section-title">Let’s Work Together</h2>
-	<section id="schedule">
-	  <div
-	    class="calendly-inline-widget"
-	    data-url="https://calendly.com/madypartners/15min?hide_event_type_details=1&hide_gdpr_banner=1"
-	    data-color-scheme="light"
-	    style="min-width:320px; height:725px; margin-top: -40px;"
-	  </div>
-	  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-	</section>
+    <div class="exp-card">
+      <span class="role">PRIMER AI (DELTA)</span>
+      <h4>Product Manager</h4>
+      <p>Deployed enterprise NLP platforms into cleared IC enclaves, automating entity extraction across sensitive data volumes.</p>
+    </div>
+  </div>
+</section>
 
-	<footer id="contact">
-	  <div class="footer-content">
-	    <div class="footer-col">
-	      <h3>Contact Us</h3>
-	      <p><strong>✉️</strong> <a href="mailto:madypartners@gmail.com">madypartners@gmail.com</a></p>
-	      <p><strong>📲</strong> <a href="tel:+17607173538">(760) 717-3538</a></p>
-	    </div>
+<section class="competency-box">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <span class="section-subtitle" style="text-align: left;">Core Competencies</span>
+    <h2 style="font-size: 3rem; font-family: 'Space Grotesk'; margin-top: 10px;">Cleared. Scalable. <br><span style="color: var(--accent-cyan);">Ready for Deployment.</span></h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-top: 4rem;">
+        <div>
+            <h4 style="color: var(--accent-lime); font-family: 'Space Grotesk';">AI-Enabled Mission Apps</h4>
+            <p style="font-size: 0.95rem; color: var(--text-dim);">Design and delivery of NLP and generative AI decision-support for complex federal workflows.</p>
+        </div>
+        <div>
+            <h4 style="color: var(--accent-lime); font-family: 'Space Grotesk';">Workflow Automation</h4>
+            <p style="font-size: 0.95rem; color: var(--text-dim);">Hardened automation for operational, cyber, and acquisition staff action processes.</p>
+        </div>
+        <div>
+            <h4 style="color: var(--accent-lime); font-family: 'Space Grotesk';">Data Topography</h4>
+            <p style="font-size: 0.95rem; color: var(--text-dim);">Structured data processing and mission-focused visualization for real-time reporting.</p>
+        </div>
+    </div>
+  </div>
+</section>
 
-	    <div class="footer-col">
-	      <img src="SDVOSB.webp" alt="SDVOSB Certification Logo" class="footer-logo">
-	      <p>Veteran-Owned Business</p>
-	      <p>SDVOSB Certification Pending</p>
-	      <p>EIN: 33-4427146</p>
-	    </div>
+<div style="text-align: center; padding: 6rem 10%; border-top: 1px solid rgba(255,255,255,0.05);">
+    <h2 style="font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 2rem;">Initiate Secure Inquiry</h2>
+    <a href="mailto:MADYPartners@gmail.com" class="btn">Request Capabilities Statement</a>
+</div>
 
-	    <div class="footer-col footer-links">
-	      <h4>Quick Links</h4>
-	      <ul>
-	        <li><a href="#services">Services</a></li>
-	        <li><a href="#pricing">Offerings</a></li>
-	        <li><a href="#about">About Us</a></li>
-	        <li><a href="#schedule">Book a Consult</a></li>
-	      </ul>
-	    </div>
-	  </div>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-logo-area">
+      <h3 style="font-family: 'Space Grotesk'; margin: 0; font-size: 1.5rem; letter-spacing: 1px;">MADY PARTNERS</h3>
+      <img src="https://www.madypartners.com/SDVOSB.webp" alt="SDVOSB Badge" class="footer-badge">
+      <p style="font-size: 0.85rem; color: var(--text-dim); margin: 0;">
+        Arlington, VA<br>
+        Veteran-Led Small Business<br>
+        SDVOSB | Minority-Owned
+      </p>
+    </div>
 
-	  <div class="footer-bottom">
-	    <p>&copy; 2025 MADY Partners. All rights reserved.</p>
-	  </div>
-	</footer>
+    <div>
+      <ul class="spec-list">
+        <li><span class="spec-label">CAGE CODE</span> 11LY1</li>
+        <li><span class="spec-label">UEI</span> TEFJYBKTYUD4</li>
+        <li><span class="spec-label">PRIMARY NAICS</span> 513210</li>
+        <li><span class="spec-label">SECONDARY</span> 541511, 541519</li>
+      </ul>
+    </div>
 
-</body>
-<style>
-	.base-service {background: #fff;border: 1px dashed #1d242d;border-radius: 8px;padding: 0 2rem 2rem 2rem;box-shadow: 0 4px 12px rgba(0,0,0,0.05);}
-	.base-service h3{margin-bottom:0;}
-	.base-service p{margin-top:1.5em; margin-bottom: 0;}
-	.base-service ul {list-style: none;padding: 0;}
-	.base-service li::before {content: '✔';margin-right: 0.5rem;color: #10b981;}
-	.add-ons {background: #fbfcfd;border: 1px solid #e5e7eb;border-radius: 8px;padding: 0 2rem 2rem 2rem;box-shadow: 0 2px 8px rgba(0,0,0,0.03);}
-	.add-ons ul {list-style: none;padding: 0;margin:0;}
-	.add-ons li {margin-bottom: 1rem;}
-	.pricing-cta {text-align: center;}
-	.circle,footer{background-color:#1d242d}
-	#about{display:flex;flex-direction:column;align-items:center;gap:2rem}
-	.about-row{display:flex;flex-wrap:wrap;align-items:center;gap:2.5rem;width:100%}
-	.about-photo img{width:160px;border-radius:30% 70% 70% 30%/30% 30% 70% 70%;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-	.about-text{max-width:700px;font-size:1.05rem;color:#333}
-	.about-text p{margin:0}
-	.core-values-timeline{display:flex;justify-content:space-between;gap:1rem;margin-top:2rem;text-align:center;position:relative}
-	.core-values-timeline::before{content:'';position:absolute;top:20px;left:0;right:0;height:1px;background:#ddd;z-index:0}
-	.value-step{flex:1;position:relative;z-index:1}
-	.circle{width:40px;height:40px;margin:0 auto;color:#fff;border-radius:50%;line-height:40px;font-weight:700}
-	.value-step h4{font-size:1.1rem;margin-bottom:.25rem;color:#1d242d;margin-top:10px}
-	.value-step p{font-size:.9rem;color:#555;margin:0}
-	#schedule{overflow:hidden}
-	footer{color:#e5e7eb;padding:3rem 1rem 2rem;font-size:.95rem}
-	.footer-content{display:flex;flex-wrap:wrap;gap:5rem;justify-content:space-between;max-width:1000px;margin:0 auto 2.5rem}
-	.footer-col{flex:1;min-width:220px;text-align:center}
-	.footer-col h3,.footer-col h4{color:#fff;margin-bottom:.75rem}
-	.footer-col a,.footer-col p{color:#d1d5db;margin-bottom:.4rem;text-decoration:none}
-	.footer-links ul{list-style:none;padding:0;margin:0}.footer-links li{margin-bottom:.3rem}
-	.footer-logo{max-width:100px;margin:0 auto .5rem;display:block}
-	.footer-bottom{text-align:center;border-top:1px solid #374151;padding-top:1rem;color:#9ca3af;font-size:.85rem}
-	.hamburger{flex-direction:column;justify-content:space-between;width:28px;height:22px;background:none;border:none;cursor:pointer;z-index:1100}
-	.hamburger span{display:none;width:100%;height:3px;background-color:#fff;border-radius:2px;transition:all .4s ease}
-	.hamburger.open span:first-child{transform:rotate(45deg) translateY(8px)}
-	.hamburger.open span:nth-child(2){opacity:0}
-	.hamburger.open span:nth-child(3){transform:rotate(-45deg) translateY(-8px)}
-	@media (max-width:1068px){
-		.hero-content h1 {font-size: 2.5rem}
-		.hero-content p {font-size:1.2rem}
-		.section-title{text-align:center; padding:0; margin:2rem auto 1rem;}
-	@media (max-width:768px){
-		.base-service p {margin-top:2em;}
-		header{grid-template-columns:auto auto}
-		.hamburger{display:flex !important;margin-left:auto}
-		.hamburger span{display: block;}
-		nav#navbar{width:100%;background-color:#1d242d;display:none;justify-content:center;align-items:center;z-index:1000}
-		nav#navbar.show{display:block;animation:.3s fadeIn;padding:30px}
-		nav#navbar ul{list-style:none;display:flex;flex-direction:column;gap:2rem;padding:0;text-align:center}
-		nav#navbar ul li a{color:#fff;font-size:1.4rem;font-weight:600;text-decoration:none;transition:color .2s}
-		nav#navbar ul li a:hover{color:#d1d5db}
-		@keyframes fadeIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-		.about-row,.about-text,.footer-content{text-align:center}
-		.footer-content{flex-direction:column;gap:2.5rem}
-		.footer-col{min-width:100%}
-		.about-row{flex-direction:column}
-		.about-photo img{margin:0 auto}
-		.core-values-timeline{flex-direction:column;gap:2rem}
-		.core-values-timeline::before{display:none}
-		.value-step{border-bottom:1px solid #ddd;padding-bottom:1rem}
-		.hero-content h1{line-height: 40px;font-size:2.2rem}
-		.hero-content p{font-size:1.2rem}
-		.cta-button, .cta-button-call{font-size:1rem;padding:1rem 1.5rem;}
-		nav ul{flex-direction:column;align-items:flex-start;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem}
-	}
-	@media (max-width:600px){
-		.core-values-timeline{flex-direction:column;align-items:center}
-		.footer-content{flex-direction:column;align-items:center;gap:2rem;text-align:center}
-		.footer-logo{margin:0 auto;max-width:80px}
-		.cta-button{margin-top:0.5rem}
-	}
-	@media (max-width:480px){
-		.hero-content h1{padding-bottom:20px}
-		.hero-content p{font-size:1rem;margin-top:0}
-		.service-card{padding:1.5rem}
-		.services-grid{gap:1.5rem}
-	}
-</style>
+    <div>
+      <ul class="spec-list">
+        <li><span class="spec-label">CLEARANCE</span> Key Personnel: TS</li>
+        <li><span class="spec-label">SAM.GOV</span> Active Status</li>
+        <li><span class="spec-label">LEADERSHIP</span> USMA / West Point</li>
+        <li><span class="spec-label">CONTACT</span> 760-717-3538</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">
+    <p style="font-size: 0.75rem; color: #555;">© 2026 MADY Partners, LLC. Clearance applies to key personnel only and does not imply facility clearance.</p>
+  </div>
+</footer>
+
 <script>
-  const hamburger = document.getElementById('hamburgerBtn');
-  const navbar = document.getElementById('navbar');
+    // Reveal animation for cards
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, { threshold: 0.1 });
 
-  hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('show');
-    hamburger.classList.toggle('open');
-  });
-
-  // Optional: close nav on link click
-  document.querySelectorAll('#navbar a').forEach(link => {
-    link.addEventListener('click', () => {
-      navbar.classList.remove('show');
-      hamburger.classList.remove('open');
+    document.querySelectorAll('.exp-card').forEach(card => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(30px)";
+        card.style.transition = "0.8s cubic-bezier(0.16, 1, 0.3, 1)";
+        observer.observe(card);
     });
-  });
 </script>
 
+</body>
 </html>
