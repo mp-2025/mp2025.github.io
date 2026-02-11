@@ -8,11 +8,8 @@
   <link rel="icon" type="image/png" href="favicons.png">
 
   <meta name="description" content="MADY Partners is a veteran-led SDVOSB software publisher delivering secure, AI-enabled mission applications for the DoD and IC. CAGE: 11LY1." />
-  <meta name="keywords" content="SDVOSB, Federal AI, DoD Software, CAGE 11LY1, UEI TEFJYBKTYUD4, Software Publisher, Anees Merzi, Veteran Owned Small Business" />
-  <meta property="og:title" content="MADY Partners | Mission Software" />
-  <meta property="og:description" content="Veteran-led federal software publisher specializing in AI-enabled mission applications." />
-  <meta property="og:image" content="logo.webp" />
-
+  <meta name="keywords" content="SDVOSB, Federal AI, DoW Software, CAGE 11LY1, UEI TEFJYBKTYUD4, Software Publisher, Anees Merzi, Veteran Owned Small Business" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   
   <style>
@@ -47,7 +44,6 @@
         radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.12) 0px, transparent 50%);
     }
 
-    /* --- High Contrast Header --- */
     header {
       position: fixed;
       width: 100%;
@@ -62,10 +58,8 @@
     }
 
     .logo-container { background: #ffffff; padding: 6px 12px; border-radius: 4px; display: flex; align-items: center; transition: 0.3s; }
-    .logo-container:hover { transform: translateY(-1px); box-shadow: 0 0 15px rgba(0,242,255,0.3); }
     .logo-container img { height: 26px; }
 
-    /* Header Contact Button */
     .header-btn {
       background: transparent;
       color: var(--accent-cyan);
@@ -91,95 +85,41 @@
       background-image: linear-gradient(rgba(2, 4, 8, 0.6), rgba(2, 4, 8, 0.6)), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
     }
 
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      line-height: 0.95;
-      font-weight: 800;
-      margin: 0;
-    }
+    .hero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.95; font-weight: 800; margin: 0; }
+    .gradient-text { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-    .gradient-text {
-      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* --- Experience Timeline --- */
+    /* --- Sections --- */
     .section-title { font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
     .section-subtitle { color: var(--accent-lime); text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; text-align: center; margin-bottom: 10px; }
 
-    .experience-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem 10%;
-    }
-
-    .exp-card {
-      background: var(--panel);
-      padding: 2rem;
-      border-radius: 12px;
-      border-left: 4px solid var(--accent-purple);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .exp-card::after {
-        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(45deg, transparent, rgba(0, 242, 255, 0.03));
-        pointer-events: none;
-    }
-
+    .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; padding: 2rem 10%; }
+    .exp-card { background: var(--panel); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent-purple); position: relative; }
     .exp-card h4 { margin: 0; color: var(--accent-cyan); font-family: 'Space Grotesk'; font-size: 1.2rem; }
     .exp-card .role { font-size: 0.75rem; color: var(--accent-lime); margin-bottom: 12px; display: block; font-weight: 700; }
     .exp-card p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.5; }
 
-    /* --- Competencies --- */
-    .competency-box { padding: 6rem 10%; background: rgba(255,255,255,0.015); border-top: 1px solid rgba(255,255,255,0.05); }
+    /* --- Partners Section --- */
+    .partners-section { padding: 6rem 10%; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.05); }
+    .partners-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; align-items: center; margin-top: 3rem; }
+    .partner-link { transition: 0.4s ease; filter: grayscale(1) opacity(0.6); }
+    .partner-link:hover { filter: grayscale(0) opacity(1); transform: scale(1.05); }
+    .partner-logo { max-height: 50px; width: auto; }
 
     /* --- Footer --- */
-    footer {
-      background: #010204;
-      padding: 5rem 10% 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 3rem;
-      margin-bottom: 4rem;
-    }
-
-    .footer-logo-area { display: flex; flex-direction: column; gap: 1.5rem; }
-    .footer-badge { height: 70px; width: auto; align-self: flex-start; filter: drop-shadow(0 0 10px rgba(0,242,255,0.2)); }
-
+    footer { background: #010204; padding: 5rem 10% 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 4rem; }
+    .footer-badge { height: 70px; width: auto; filter: drop-shadow(0 0 10px rgba(0,242,255,0.2)); }
     .spec-list { list-style: none; padding: 0; font-family: 'Space Grotesk'; }
     .spec-list li { margin-bottom: 12px; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; font-size: 0.85rem; }
     .spec-label { color: var(--accent-cyan); font-size: 0.7rem; font-weight: 700; }
 
-    .btn {
-      background: var(--accent-cyan);
-      color: black;
-      padding: 16px 45px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 800;
-      text-transform: uppercase;
-      display: inline-block;
-      transition: 0.3s;
-      border: none;
-    }
-
+    .btn { background: var(--accent-cyan); color: black; padding: 16px 45px; border-radius: 4px; text-decoration: none; font-weight: 800; text-transform: uppercase; transition: 0.3s; border: none; display: inline-block; }
     .btn:hover { background: var(--accent-lime); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,242,255,0.4); }
 
     @media (max-width: 768px) {
-      header { justify-content: center; padding: 1rem; gap: 1rem; }
-      .header-btn { display: none; } /* Simplified mobile header */
-      .hero { text-align: center; }
+      .header-btn { display: none; }
       .hero h1 { font-size: 3.5rem; }
-      .footer-grid { text-align: center; }
-      .footer-badge { align-self: center; }
+      .partners-grid { gap: 2rem; }
     }
   </style>
 </head>
@@ -198,7 +138,7 @@
   <span class="section-subtitle" style="text-align: left;">CAGE: 11LY1 | UEI: TEFJYBKTYUD4</span>
   <h1>Mission Software <br><span class="gradient-text">Redefined.</span></h1>
   <p style="max-width: 600px; font-size: 1.25rem; color: var(--text-dim); margin-top: 1.5rem; line-height: 1.6;">
-    Veteran-led software publisher delivering secure, generative AI and mission-critical applications for the DoD and Intelligence Community.
+    Veteran-led software publisher delivering secure, generative AI and mission-critical applications for the DoW and Intelligence Community.
   </p>
 </section>
 
@@ -206,43 +146,41 @@
   <span class="section-subtitle">Founder's Portfolio of Impact</span>
   <h2 class="section-title">A Proven Record of Delivering <br>Frontier Tech to the Warfighter</h2>
   
-  <div style="max-width: 800px; margin: -1.5rem auto 4rem; text-align: center; color: var(--text-dim);">
-    <p>Before founding MADY Partners, our Managing Member led the delivery of mission-critical AI products across the defense landscape. MADY Partners was built to scale this specific expertise.</p>
-    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
-        <span style="border: 1px solid var(--accent-cyan); color: var(--accent-cyan); padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700;">USMA / WEST POINT</span>
-        <span style="border: 1px solid var(--accent-purple); color: var(--accent-purple); padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700;">ACTIVE TS CLEARANCE</span>
-        <span style="border: 1px solid var(--accent-lime); color: var(--accent-lime); padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700;">10+ YRS DOD EXP</span>
-    </div>
-  </div>
-
   <div class="experience-grid">
     <div class="exp-card">
       <span class="role">OPERATIONAL IMPACT</span>
       <h4>GenAI Mission Orchestration</h4>
-      <p>Strategized and led the adoption of Large Language Models (LLMs) for the Joint Staff, developing high-fidelity artifact generation pipelines to accelerate multi-domain planning.</p>
+      <p>Strategized and led the adoption of Large Language Models (LLMs) for the Joint Staff, developing high-fidelity artifact generation pipelines.</p>
     </div>
-    
     <div class="exp-card">
       <span class="role">ACQUISITION IMPACT</span>
       <h4>Automated Procurement Intelligence</h4>
-      <p>Architected generative AI solutions from initial concept to successful OTA award, engineering workflows that reduced administrative burdens for federal contracting stakeholders.</p>
+      <p>Architected generative AI solutions from initial concept to successful OTA award, engineering workflows for federal contracting.</p>
     </div>
-
     <div class="exp-card">
       <span class="role">CYBER IMPACT</span>
       <h4>Defensive Cyber Automation</h4>
-      <p>Matured specialized cyber mission platforms from prototype to production, integrating massive-scale workflow automation to synchronize defensive cyber operations.</p>
+      <p>Matured specialized cyber mission platforms from prototype to production, integrating massive-scale workflow automation.</p>
     </div>
-
     <div class="exp-card">
       <span class="role">INTELLIGENCE IMPACT</span>
       <h4>Enterprise NLP Deployment</h4>
-      <p>Led the deployment of sophisticated NLP products within cleared enclaves, automating entity extraction to transform raw reporting into structured intelligence.</p>
+      <p>Led the deployment of sophisticated NLP products within cleared enclaves, automating entity extraction for structured intelligence.</p>
     </div>
   </div>
 </section>
 
-<div style="text-align: center; padding: 6rem 10%; border-top: 1px solid rgba(255,255,255,0.05);">
+<section class="partners-section">
+    <span class="section-subtitle">Our Growing Ecosystem</span>
+    <h2 class="section-title">Partners & Sponsors</h2>
+    <div class="partners-grid">
+        <a href="https://elitesports.com" target="_blank" class="partner-link">
+            <img src="elite.png" alt="EliteSports" class="partner-logo">
+        </a>
+        </div>
+</section>
+
+<div style="text-align: center; padding: 8rem 10%;">
     <h2 style="font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 2rem;">Initiate Secure Inquiry</h2>
     <a href="mailto:MADYPartners@gmail.com" class="btn">Request Capabilities Statement</a>
 </div>
@@ -264,7 +202,6 @@
         <li><span class="spec-label">CAGE CODE</span> 11LY1</li>
         <li><span class="spec-label">UEI</span> TEFJYBKTYUD4</li>
         <li><span class="spec-label">PRIMARY NAICS</span> 513210</li>
-        <li><span class="spec-label">SECONDARY</span> 541511, 541519</li>
       </ul>
     </div>
 
@@ -273,18 +210,16 @@
         <li><span class="spec-label">CLEARANCE</span> Key Personnel: TS</li>
         <li><span class="spec-label">SAM.GOV</span> Active Status</li>
         <li><span class="spec-label">LEADERSHIP</span> USMA / West Point</li>
-        <li><span class="spec-label">CONTACT</span> 760-717-3538</li>
       </ul>
     </div>
   </div>
 
   <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">
-    <p style="font-size: 0.75rem; color: #555;">© 2026 MADY Partners, LLC. Clearance applies to key personnel only and does not imply facility clearance.</p>
+    <p style="font-size: 0.75rem; color: #555;">© 2026 MADY Partners, LLC.</p>
   </div>
 </footer>
 
 <script>
-    // Reveal animation for cards
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -294,11 +229,11 @@
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.exp-card').forEach(card => {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(30px)";
-        card.style.transition = "0.8s cubic-bezier(0.16, 1, 0.3, 1)";
-        observer.observe(card);
+    document.querySelectorAll('.exp-card, .partner-link').forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "0.8s cubic-bezier(0.16, 1, 0.3, 1)";
+        observer.observe(el);
     });
 </script>
 
