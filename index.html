@@ -1,241 +1,682 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MADY Partners | Federal AI & Software Systems</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MADY Partners | Federal Construction & Facilities Support</title>
 
-  <link rel="icon" type="image/jpeg" href="favicons.jpeg">
+    <link rel="icon" type="image/jpeg" href="https://cdn.jsdelivr.net/gh/mp-2025/mp2025.github.io@main/favicons.jpeg">
 
-  <meta name="description" content="MADY Partners is a veteran-led SDVOSB software publisher delivering secure, AI-enabled mission applications for the DoD and IC. CAGE: 11LY1." />
-  <meta name="keywords" content="SDVOSB, Federal AI, DoW Software, CAGE 11LY1, UEI TEFJYBKTYUD4, Software Publisher, Anees Merzi, Veteran Owned Small Business" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg: #020408;
-      --panel: #0a0f1a;
-      --accent-cyan: #00f2ff;
-      --accent-purple: #7000ff;
-      --accent-lime: #adff00;
-      --text-main: #f8fafc;
-      --text-dim: #94a3b8;
-      --header-glass: rgba(10, 15, 26, 0.9);
-    }
+    <meta name="description" content="MADY Partners, LLC is an SDVOSB and Virginia SWaM certified small business providing federal construction and facilities support services. CAGE: 11LY1." />
+    <meta name="keywords" content="SDVOSB, SWaM, Federal Construction, Facilities Support, CAGE 11LY1, UEI TEFJYBKTYUD4, Anees Merzi, Veteran Owned Small Business, Arlington VA" />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    * { box-sizing: border-box; cursor: crosshair; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background-color: var(--bg);
-      color: var(--text-main);
-      overflow-x: hidden;
-    }
+    <style>
+        :root {
+            --bg-dark: #0B132B;
+            --bg-card: #1C2541;
+            --text-main: #F1F5F9;
+            --text-muted: #94A3B8;
+            --navy-primary: #1E3A8A;
+            --gold-accent: #D97706;
+            --border-line: #334155;
+        }
 
-    /* --- Background Layer --- */
-    .mesh-bg {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      z-index: -1;
-      background: 
-        radial-gradient(at 0% 0%, rgba(112, 0, 255, 0.12) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(0, 242, 255, 0.12) 0px, transparent 50%);
-    }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0; z-index: 1000;
-      padding: 0.8rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--header-glass);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+        /* --- Header --- */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 0.8rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 19, 43, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    .logo-container { background: #ffffff; padding: 6px 12px; border-radius: 4px; display: flex; align-items: center; transition: 0.3s; }
-    .logo-container img { height: 26px; }
+        .logo-container {
+            background: #ffffff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img { height: 28px; width: auto; }
 
-    .header-btn {
-      background: transparent;
-      color: var(--accent-cyan);
-      border: 1px solid var(--accent-cyan);
-      padding: 8px 18px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: 0.3s;
-    }
-    .header-btn:hover { background: var(--accent-cyan); color: #000; box-shadow: 0 0 15px var(--accent-cyan); }
+        .btn-header {
+            background: transparent;
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
+            padding: 8px 14px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-header:hover {
+            background: var(--gold-accent);
+            color: #ffffff;
+        }
 
-    /* --- Hero --- */
-    .hero {
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 10%;
-      background-image: linear-gradient(rgba(2, 4, 8, 0.6), rgba(2, 4, 8, 0.6)), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-    }
+        /* --- Hero Section with Blueprint Overlay --- */
+        .hero {
+            position: relative;
+            padding: 9.5rem 6% 4.5rem;
+            background: linear-gradient(180deg, rgba(11, 19, 43, 0.75) 0%, rgba(15, 23, 42, 0.97) 100%), 
+                        url("https://cdn.jsdelivr.net/gh/mp-2025/mp2025.github.io@main/blueprint.jpeg") center/cover no-repeat;
+            border-bottom: 1px solid var(--border-line);
+        }
 
-    .hero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.95; font-weight: 800; margin: 0; }
-    .gradient-text { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.25rem;
+        }
 
-    /* --- Sections --- */
-    .section-title { font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
-    .section-subtitle { color: var(--accent-lime); text-transform: uppercase; letter-spacing: 3px; font-weight: 700; display: block; text-align: center; margin-bottom: 10px; }
+        .hero-badge {
+            background: rgba(28, 37, 65, 0.8);
+            border: 1px solid var(--border-line);
+            color: #CBD5E1;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
 
-    .experience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; padding: 2rem 10%; }
-    .exp-card { background: var(--panel); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--accent-purple); position: relative; }
-    .exp-card h4 { margin: 0; color: var(--accent-cyan); font-family: 'Space Grotesk'; font-size: 1.2rem; }
-    .exp-card .role { font-size: 0.75rem; color: var(--accent-lime); margin-bottom: 12px; display: block; font-weight: 700; }
-    .exp-card p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.5; }
+        .hero h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            line-height: 1.15;
+            font-weight: 800;
+            margin: 0 0 1.25rem 0;
+            color: #FFFFFF;
+        }
 
-    /* --- Partners Section --- */
-    .partners-section { padding: 6rem 10%; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.05); }
-    .partners-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; align-items: center; margin-top: 3rem; }
-    .partner-link { transition: 0.4s ease; filter: grayscale(1) opacity(0.6); }
-    .partner-link:hover { filter: grayscale(0) opacity(1); transform: scale(1.05); }
-    .partner-logo { max-height: 50px; width: auto; }
+        .hero-subtitle {
+            max-width: 760px;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
 
-    /* --- Footer --- */
-    footer { background: #010204; padding: 5rem 10% 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 4rem; }
-    .footer-badge { height: 70px; width: auto; filter: drop-shadow(0 0 10px rgba(0,242,255,0.2)); }
-    .spec-list { list-style: none; padding: 0; font-family: 'Space Grotesk'; }
-    .spec-list li { margin-bottom: 12px; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; font-size: 0.85rem; }
-    .spec-label { color: var(--accent-cyan); font-size: 0.7rem; font-weight: 700; }
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
 
-    .btn { background: var(--accent-cyan); color: black; padding: 16px 45px; border-radius: 4px; text-decoration: none; font-weight: 800; text-transform: uppercase; transition: 0.3s; border: none; display: inline-block; }
-    .btn:hover { background: var(--accent-lime); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,242,255,0.4); }
+        .btn-primary {
+            background: var(--gold-accent);
+            color: #ffffff;
+            padding: 13px 26px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary:hover {
+            background: #B45309;
+            transform: translateY(-2px);
+        }
 
-    @media (max-width: 768px) {
-      .header-btn { display: none; }
-      .hero h1 { font-size: 3.5rem; }
-      .partners-grid { gap: 2rem; }
-    }
-  </style>
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 13px 26px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* --- Section Shared --- */
+        section {
+            padding: 4rem 6%;
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .section-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .section-subtitle {
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* --- Certifications Dual Grid --- */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .cert-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.05rem;
+            color: #FFFFFF;
+            margin: 0 0 0.85rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cert-card h3 i { color: var(--gold-accent); }
+
+        .cert-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cert-list li {
+            position: relative;
+            padding-left: 1.4rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .cert-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold-accent);
+            font-weight: bold;
+        }
+
+        /* --- Clean Streamlined NAICS Table --- */
+        .naics-section {
+            background: #080E1F;
+            border-top: 1px solid var(--border-line);
+            border-bottom: 1px solid var(--border-line);
+            padding: 4rem 6%;
+        }
+
+        .naics-list-wrap {
+            background: var(--bg-card);
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .naics-row {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--border-line);
+            align-items: center;
+        }
+
+        .naics-row:last-child {
+            border-bottom: none;
+        }
+
+        .naics-row-header {
+            background: #0F172A;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .naics-code {
+            font-family: monospace;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .primary-tag {
+            font-size: 0.65rem;
+            font-weight: 800;
+            background: var(--navy-primary);
+            color: #ffffff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        .naics-desc {
+            font-size: 0.95rem;
+            color: #E2E8F0;
+            font-weight: 500;
+        }
+
+        /* --- Founder Spotlight --- */
+        .founder-section {
+            background: var(--bg-dark);
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .founder-image-wrap img {
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid var(--border-line);
+            display: block;
+        }
+
+        .founder-details h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            margin: 0 0 0.25rem 0;
+            color: #FFFFFF;
+        }
+
+        .founder-title {
+            color: var(--gold-accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .founder-bio {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+        }
+
+        .highlights-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .highlight-item {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-line);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #E2E8F0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .highlight-item i { color: var(--gold-accent); }
+
+        /* --- Partners Section --- */
+        .partners-section {
+            text-align: center;
+            background: #080E1F;
+            border-top: 1px solid var(--border-line);
+            padding: 3rem 6%;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .partner-link {
+            filter: grayscale(1) opacity(0.6);
+            transition: all 0.3s ease;
+        }
+
+        .partner-link:hover {
+            filter: grayscale(0) opacity(1);
+            transform: scale(1.05);
+        }
+
+        .partner-logo {
+            max-height: 34px;
+            width: auto;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #050914;
+            padding: 3.5rem 6% 2rem;
+            border-top: 1px solid var(--border-line);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            align-items: center;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.3rem;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-badges {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .footer-badge-img {
+            height: 80px;
+            width: auto;
+            border-radius: 4px;
+            background: #ffffff;
+            padding: 3px;
+            display: block;
+        }
+
+        .spec-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .spec-list li {
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 6px;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-label {
+            color: var(--gold-accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
+            color: #64748B;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 900px) {
+            .founder-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .founder-image-wrap {
+                max-width: 200px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                align-items: start;
+            }
+            .naics-row {
+                grid-template-columns: 110px 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section { padding: 3rem 5%; }
+            .hero { padding: 7.5rem 5% 3rem; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            .btn-header span { display: none; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="mesh-bg"></div>
-
 <header>
-  <div class="logo-container">
-    <img src="logo.webp" alt="MADY Partners">
-  </div>
-  <a href="mailto:MADYPartners@gmail.com" class="header-btn">Secure Briefing</a>
+    <div class="logo-container">
+        <img src="https://cdn.jsdelivr.net/gh/mp-2025/mp2025.github.io@main/logo.webp" alt="MADY Partners Logo">
+    </div>
+    <div class="header-actions">
+        <a href="https://cdn.jsdelivr.net/gh/mp-2025/mp2025.github.io@main/MADY_Partners_Capability_Statement.pdf" target="_blank" class="btn-header">
+            <i class="fa-solid fa-file-pdf"></i> <span>Capability Statement</span>
+        </a>
+    </div>
 </header>
 
 <section class="hero">
-  <span class="section-subtitle" style="text-align: left;">CAGE: 11LY1 | UEI: TEFJYBKTYUD4</span>
-  <h1>Mission Software <br><span class="gradient-text">Redefined.</span></h1>
-  <p style="max-width: 600px; font-size: 1.25rem; color: var(--text-dim); margin-top: 1.5rem; line-height: 1.6;">
-    Veteran-led software publisher delivering secure, generative AI and mission-critical applications for the DoW and Intelligence Community.
-  </p>
+    <div class="hero-badge-container">
+        <span class="hero-badge">SDVOSB Certified</span>
+        <span class="hero-badge">Virginia SWaM Certified</span>
+        <span class="hero-badge">Minority-Owned</span>
+        <span class="hero-badge">Top Secret Clearance</span>
+    </div>
+
+    <h1>Federal Construction &amp;<br>Facilities Program Support</h1>
+    
+    <p class="hero-subtitle">
+        MADY Partners, LLC is a veteran-led small business partnering with general contractors and prime firms to meet socio-economic subcontracting goals and unlock SDVOSB set-aside opportunities across federal, VA, and DoW facilities contracts.
+    </p>
+
+    <div class="hero-cta-group">
+        <a href="https://cdn.jsdelivr.net/gh/mp-2025/mp2025.github.io@main/MADY_Partners_Capability_Statement.pdf" target="_blank" class="btn-primary">
+            <i class="fa-solid fa-download"></i> Capabilities PDF
+        </a>
+        <a href="mailto:MADYPartners@gmail.com" class="btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Teaming Inquiry
+        </a>
+    </div>
 </section>
 
-<section id="experience" style="padding: 6rem 0;">
-  <span class="section-subtitle">Founder's Portfolio of Impact</span>
-  <h2 class="section-title">A Proven Record of Delivering <br>Frontier Tech to the Warfighter</h2>
-  
-  <div class="experience-grid">
-    <div class="exp-card">
-      <span class="role">OPERATIONAL IMPACT</span>
-      <h4>GenAI Mission Orchestration</h4>
-      <p>Strategized and led the adoption of Large Language Models (LLMs) for the Joint Staff, developing high-fidelity artifact generation pipelines.</p>
+<!-- Socio-Economic Designations -->
+<section>
+    <div class="section-header">
+        <span class="section-subtitle">Socio-Economic Designations</span>
+        <h2 class="section-title">Why Partner With MADY</h2>
     </div>
-    <div class="exp-card">
-      <span class="role">ACQUISITION IMPACT</span>
-      <h4>Automated Procurement Intelligence</h4>
-      <p>Architected generative AI solutions from initial concept to successful OTA award, engineering workflows for federal contracting.</p>
+
+    <div class="cert-grid">
+        <div class="cert-card">
+            <h3><i class="fa-solid fa-flag-usa"></i> Federal Certifications</h3>
+            <ul class="cert-list">
+                <li>Service-Disabled Veteran-Owned Small Business (SDVOSB)</li>
+                <li>Minority-Owned Small Business</li>
+                <li>SAM.gov Registered &amp; Active Status</li>
+                <li>SBA Nonmanufacturer Rule Compliant</li>
+            </ul>
+        </div>
+
+        <div class="cert-card">
+            <h3><i class="fa-solid fa-building-columns"></i> State &amp; Regional Position</h3>
+            <ul class="cert-list">
+                <li>Virginia SWaM Certified Small Business</li>
+                <li>Arlington, VA Based — NCR Region Coverage</li>
+                <li>Positioned for VA and DoW Facilities Support</li>
+                <li>Dual Certification for Multiple Goal Satisfaction</li>
+            </ul>
+        </div>
     </div>
-    <div class="exp-card">
-      <span class="role">CYBER IMPACT</span>
-      <h4>Defensive Cyber Automation</h4>
-      <p>Matured specialized cyber mission platforms from prototype to production, integrating massive-scale workflow automation.</p>
-    </div>
-    <div class="exp-card">
-      <span class="role">INTELLIGENCE IMPACT</span>
-      <h4>Enterprise NLP Deployment</h4>
-      <p>Led the deployment of sophisticated NLP products within cleared enclaves, automating entity extraction for structured intelligence.</p>
-    </div>
-  </div>
 </section>
 
+<!-- Clean Streamlined NAICS Section -->
+<section class="naics-section">
+    <div class="section-header">
+        <span class="section-subtitle">Core Competencies</span>
+        <h2 class="section-title">NAICS Codes &amp; Service Lines</h2>
+    </div>
+
+    <div class="naics-list-wrap">
+        <div class="naics-row naics-row-header">
+            <div>NAICS Code</div>
+            <div>Service Line</div>
+        </div>
+        <div class="naics-row">
+            <div class="naics-code">561210</div>
+            <div class="naics-desc">Facilities Support Services</div>
+        </div>
+        <div class="naics-row">
+            <div class="naics-code">541611</div>
+            <div class="naics-desc">Administrative Management &amp; General Management Consulting Services</div>
+        </div>
+        <div class="naics-row">
+            <div class="naics-code">561990</div>
+            <div class="naics-desc">All Other Support Services</div>
+        </div>
+        <div class="naics-row">
+            <div class="naics-code">561720</div>
+            <div class="naics-desc">Janitorial Services</div>
+        </div>
+        <div class="naics-row">
+            <div class="naics-code">236220</div>
+            <div class="naics-desc">Commercial and Institutional Building Construction</div>
+        </div>
+    </div>
+</section>
+
+<!-- Founder Spotlight -->
+<section class="founder-section">
+    <div class="founder-grid">
+        <div class="founder-image-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/mp-2025/mp2025.github.io@main/founder.webp" alt="Anees Merzi - Founder">
+        </div>
+        <div class="founder-details">
+            <h3>Anees Merzi</h3>
+            <span class="founder-title">Founder &amp; Managing Partner</span>
+            <p class="founder-bio">
+                A U.S. Military Academy (West Point) graduate with extensive experience directing cross-functional programs within the Department of War and Intelligence Community. Having managed acquisition processes from concept through contract award and matured complex operational platforms from prototype to full production, this discipline and compliance rigor now anchors MADY’s approach to federal construction and facilities support engagements.
+            </p>
+            <div class="highlights-list">
+                <div class="highlight-item"><i class="fa-solid fa-graduation-cap"></i> USMA (West Point) Graduate</div>
+                <div class="highlight-item"><i class="fa-solid fa-shield-halved"></i> Key Personnel: Active TS Clearance</div>
+                <div class="highlight-item"><i class="fa-solid fa-handshake-angle"></i> DoW &amp; IC Acquisition Background</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners Section -->
 <section class="partners-section">
-    <span class="section-subtitle">Our Growing Ecosystem</span>
-    <h2 class="section-title">Partners & Sponsors</h2>
+    <span class="section-subtitle">Ecosystem &amp; Partners</span>
+    <h2 class="section-title">Teaming Network</h2>
     <div class="partners-grid">
         <a href="https://elitesports.com" target="_blank" class="partner-link">
-            <img src="elite.png" alt="EliteSports" class="partner-logo">
+            <img src="https://cdn.jsdelivr.net/gh/mp-2025/mp2025.github.io@main/elite.png" alt="EliteSports Logo" class="partner-logo">
         </a>
-        </div>
+    </div>
 </section>
 
-<div style="text-align: center; padding: 8rem 10%;">
-    <h2 style="font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 2rem;">Initiate Secure Inquiry</h2>
-    <a href="mailto:MADYPartners@gmail.com" class="btn">Request Capabilities Statement</a>
-</div>
-
+<!-- Footer -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-logo-area">
-      <h3 style="font-family: 'Space Grotesk'; margin: 0; font-size: 1.5rem; letter-spacing: 1px;">MADY PARTNERS</h3>
-      <img src="https://www.madypartners.com/SDVOSB.webp" alt="SDVOSB Badge" class="footer-badge">
-      <p style="font-size: 0.85rem; color: var(--text-dim); margin: 0;">
-        Arlington, VA<br>
-        Veteran-Led Small Business<br>
-        SDVOSB | Minority-Owned
-      </p>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <h3>MADY PARTNERS, LLC</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0 0 0.5rem 0;">
+                Certified Small Business Solutions for Federal Construction &amp; Facilities Programs.
+            </p>
+            <div class="footer-badges">
+                <img src="https://www.madypartners.com/SDVOSB.webp" alt="SDVOSB Certified Badge" class="footer-badge-img">
+                <img src="https://cdn.jsdelivr.net/gh/mp-2025/mp2025.github.io@main/SWaM-Logo-1.jpg.webp" alt="SWaM Certified Badge" class="footer-badge-img">
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0;">
+                Arlington, Virginia<br>
+                Veteran-Led | SDVOSB | Minority-Owned
+            </p>
+        </div>
+
+        <div>
+            <ul class="spec-list">
+                <li><span class="spec-label">CAGE CODE</span> <span>11LY1</span></li>
+                <li><span class="spec-label">UEI</span> <span>TEFJYBKTYUD4</span></li>
+                <li><span class="spec-label">PRIMARY NAICS</span> <span>561210</span></li>
+                <li><span class="spec-label">SAM.GOV STATUS</span> <span style="color: #10B981; font-weight: bold;">Active</span></li>
+            </ul>
+        </div>
+
+        <div>
+            <ul class="spec-list">
+                <li><span class="spec-label">CLEARANCE</span> <span>Key Personnel: TS</span></li>
+                <li><span class="spec-label">LEADERSHIP</span> <span>USMA / West Point</span></li>
+                <li><span class="spec-label">SWaM STATUS</span> <span>Virginia Certified</span></li>
+                <li><span class="spec-label">CONTACT</span> <span>MADYPartners@gmail.com</span></li>
+            </ul>
+        </div>
     </div>
 
-    <div>
-      <ul class="spec-list">
-        <li><span class="spec-label">CAGE CODE</span> 11LY1</li>
-        <li><span class="spec-label">UEI</span> TEFJYBKTYUD4</li>
-        <li><span class="spec-label">PRIMARY NAICS</span> 513210</li>
-      </ul>
+    <div class="copyright">
+        <p>© 2026 MADY Partners, LLC. All Rights Reserved.</p>
     </div>
-
-    <div>
-      <ul class="spec-list">
-        <li><span class="spec-label">CLEARANCE</span> Key Personnel: TS</li>
-        <li><span class="spec-label">SAM.GOV</span> Active Status</li>
-        <li><span class="spec-label">LEADERSHIP</span> USMA / West Point</li>
-      </ul>
-    </div>
-  </div>
-
-  <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">
-    <p style="font-size: 0.75rem; color: #555;">© 2026 MADY Partners, LLC.</p>
-  </div>
 </footer>
-
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.exp-card, .partner-link').forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(20px)";
-        el.style.transition = "0.8s cubic-bezier(0.16, 1, 0.3, 1)";
-        observer.observe(el);
-    });
-</script>
 
 </body>
 </html>
